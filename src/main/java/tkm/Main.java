@@ -1,19 +1,18 @@
 package tkm;
 
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Main implements ActionListener{
+public class Main {
 
 
     public static void main(String[] args) {
 
         JFrame window = new JFrame();
+        
         window.setLayout(new FlowLayout()); // Main Menu Start
         window.add(new JLabel("Main Menu"));
         JButton startgame = new JButton("Start Game");  
@@ -35,11 +34,6 @@ public class Main implements ActionListener{
 
         window.setLocationRelativeTo(null);
         window.setVisible(true);
-        
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
         
     }
 
