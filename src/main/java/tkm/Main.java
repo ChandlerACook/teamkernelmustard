@@ -2,9 +2,8 @@ package tkm;
 
 import java.awt.FlowLayout;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 public class Main {
 
@@ -12,15 +11,13 @@ public class Main {
     public static void main(String[] args) {
 
         JFrame window = new JFrame();
+        window.setLayout(new FlowLayout());
         
-        window.setLayout(new FlowLayout()); // Main Menu Start
-        window.add(new JLabel("Main Menu"));
-        JButton startgame = new JButton("Start Game");  
-        JButton joingame = new JButton("Join Game");
-        JButton exitgame = new JButton("Exit Game");
-        window.add(startgame);
-        window.add(joingame);
-        window.add(exitgame);  // Main Menu End
+        // Main Menu Start
+        MainMenu mainMenu = new MainMenu();
+        JPanel mainMenuPanel = mainMenu.createMainMenu();
+        window.add(mainMenuPanel);
+        // Main Menu End
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
